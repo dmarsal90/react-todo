@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <TaskCreator />
+      <TaskCreator createTask={createTask} />
 
       <table>
         <thead>
