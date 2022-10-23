@@ -1,17 +1,18 @@
+import { TaskRow } from "./TaskRow";
+
 export const TaskTable = ({ tasks }) => {
-    return (
-      <table>
-        <thead>
-          <tr>
-            <th>Tasks</th>
-          </tr>
-        </thead>
-        <tbody>
-                {tasks.map((task) => ( 
-              
-          ))}
-        </tbody>
-      </table>
-    );
-  
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Tasks</th>
+        </tr>
+      </thead>
+      <tbody>
+        {tasks.map((task) => (
+          <TaskRow task={task} />
+        ))}
+      </tbody>
+    </table>
+  );
 };
