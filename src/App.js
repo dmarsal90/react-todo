@@ -6,15 +6,20 @@ import { useState } from "react";
 function App() {
   const [newTaskname, setNewTaskName] = useState();
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    localStorage.setItem('task', newTaskname);
+  }
+
   return (
     <div className="App">
-      <form onSubmit={}>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Enter a new task"
           onChange={(e) => setNewTaskName(e.target.value)}
         />
-        <button onClick={() => alert(newTaskname)}>
+        <button>
           <FontAwesomeIcon icon={faPlus} /> Save task
         </button>
       </form>
