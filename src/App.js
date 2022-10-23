@@ -10,7 +10,11 @@ function App() {
   ]);
 
   function createTask(taskName) {
-    setTaskitems([...tasksItems, {name: taskName, done: false}]);
+    if (!tasksItems.find((task) => task.name === taskName)) {
+      setTaskitems([...tasksItems, { name: taskName, done: false }]);
+    } else {
+      alert("The task already exist");
+    }
   }
 
   return (
