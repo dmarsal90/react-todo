@@ -17,7 +17,7 @@ function App() {
 
   const toggleTask = task => {
     setTaskItems(
-      tasksItems.map(t => (t.name == task.name) ? { ...t, done: !t.done } : t)
+      tasksItems.map(t => (t.name === task.name) ? { ...t, done: !t.done } : t)
     );
   }
   
@@ -36,7 +36,7 @@ function App() {
   return (
     <div className="App">
       <TaskCreator createTask={createTask} />
-      <TaskTable tasks={tasksItems} />
+      <TaskTable tasks={tasksItems} toggleTask= {toggleTask} />
     </div>
   );
 }
