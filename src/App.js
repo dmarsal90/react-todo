@@ -28,20 +28,7 @@ function App() {
     <div className="App">
       <TaskCreator createTask={createTask} />
 
-      <table>
-        <thead>
-          <tr>
-            <th>Tasks</th>
-          </tr>
-        </thead>
-        <tbody>
-          {tasksItems.map((task) => (
-            <tr key={task.name}>
-              <td>{task.name}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      
     </div>
   );
 }
