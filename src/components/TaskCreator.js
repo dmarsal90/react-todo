@@ -2,12 +2,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-export const TaskCreator = (props) => {
+export const TaskCreator = ({createTask}) => {
   const [newTaskName, setNewTaskName] = useState();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.createTask(newTaskName);
+    createTask(newTaskName);
     localStorage.setItem("tasks", newTaskName);
     setNewTaskName("");
   };
