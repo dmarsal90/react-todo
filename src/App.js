@@ -2,6 +2,7 @@ import "./App.css";
 import { TaskCreator } from "./components/TaskCreator";
 import { useState, useEffect } from "react";
 import { TaskTable } from "./components/TaskTable";
+import { faTheaterMasks } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [tasksItems, setTaskItems] = useState([]);
@@ -13,6 +14,13 @@ function App() {
       alert("The task already exist");
     }
   }
+
+  const toggleTask = task => {
+    setTaskItems(
+      tasksItems.map(t => (t.name == task.name) ? { ...t, done: !t.done } : t)
+    );
+  }
+  
 
   useEffect(() => {
     let data = localStorage.getItem("tasks");
@@ -28,9 +36,7 @@ function App() {
   return (
     <div className="App">
       <TaskCreator createTask={createTask} />
-      <TaskTable tasks={ tasksItems } />
-
-      
+      <TaskTable tasks={tasksItems} />
     </div>
   );
 }
