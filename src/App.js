@@ -8,7 +8,8 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem('task', newTaskname);
+    localStorage.setItem('tasks', newTaskname);
+    setNewTaskName('');
   }
 
   return (
@@ -16,6 +17,7 @@ function App() {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
+          value={newTaskname}
           placeholder="Enter a new task"
           onChange={(e) => setNewTaskName(e.target.value)}
         />
