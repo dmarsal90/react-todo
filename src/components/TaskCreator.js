@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-export const TaskCreator = ({createTask}) => {
+export const TaskCreator = ({ createTask }) => {
   const [newTaskName, setNewTaskName] = useState();
 
   const handleSubmit = (e) => {

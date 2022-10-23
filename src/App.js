@@ -2,7 +2,6 @@ import "./App.css";
 import { TaskCreator } from "./components/TaskCreator";
 import { useState, useEffect } from "react";
 import { TaskTable } from "./components/TaskTable";
-import { faTheaterMasks } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [tasksItems, setTaskItems] = useState([]);
