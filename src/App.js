@@ -9,8 +9,8 @@ function App() {
     { name: "Mi tercera tarea", done: false },
   ]);
 
-  function createTask() {
-    
+  function createTask(taskName) {
+    setTaskitems([...tasksItems, {name: taskName, done: false}]);
   }
 
   return (
