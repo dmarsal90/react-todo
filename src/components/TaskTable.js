@@ -1,4 +1,4 @@
-export const TaskTable = ({tasks}) => {
+export const TaskTable = ({ tasks }) => {
     return (
       <table>
         <thead>
@@ -7,13 +7,8 @@ export const TaskTable = ({tasks}) => {
           </tr>
         </thead>
         <tbody>
-          {tasks.map((task) => (
-            <tr key={task.name}>
-                  <td>
-                      {task.name}
-                      <input type="checkbox" checked={task.done} onChange={ ()=> {}} />
-                  </td>
-            </tr>
+                {tasks.map((task) => ( 
+              
           ))}
         </tbody>
       </table>
