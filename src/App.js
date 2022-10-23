@@ -9,6 +9,10 @@ function App() {
     { name: "Mi tercera tarea", done: false },
   ]);
 
+  function createTask() {
+    
+  }
+
   return (
     <div className="App">
       <TaskCreator />
