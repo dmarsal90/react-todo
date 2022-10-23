@@ -10,7 +10,7 @@ export const TaskTable = ({ tasks }) => {
       </thead>
       <tbody>
         {tasks.map((task) => (
-          <TaskRow task={task} />
+          <TaskRow task={task} key={task.name} />
         ))}
       </tbody>
     </table>
