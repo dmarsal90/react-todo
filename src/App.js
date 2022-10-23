@@ -8,14 +8,16 @@ function App() {
 
   return (
     <div className="App">
-      <input
-        type="text"
-        placeholder="Enter a new task"
-        onChange={(e) => setNewTaskName(e.target.value)}
-      />
-      <button onClick={() => alert(newTaskname)}>
-        <FontAwesomeIcon icon={faPlus} /> Save task
-      </button>
+      <form onSubmit={}>
+        <input
+          type="text"
+          placeholder="Enter a new task"
+          onChange={(e) => setNewTaskName(e.target.value)}
+        />
+        <button onClick={() => alert(newTaskname)}>
+          <FontAwesomeIcon icon={faPlus} /> Save task
+        </button>
+      </form>
     </div>
   );
 }
