@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
 
-      <input type='text' placeholder='Enter a new task'/>
+      <input type='text' placeholder='Enter a new task' onChange={(e) => console.log(e)}/>
       <button onClick={()=>alert('clicked')}><FontAwesomeIcon icon={faPlus}/> Save task</button>
 
     </div>
