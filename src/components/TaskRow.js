@@ -1,6 +1,6 @@
 export const TaskRow = ({task}) => {
   return (
-    <tr key={task.name}>
+    <tr>
       <td>
         {task.name}
         <input type="checkbox" checked={task.done} onChange={() => {}} />
