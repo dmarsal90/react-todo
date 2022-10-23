@@ -1,6 +1,6 @@
 import "./App.css";
 import { TaskCreator } from "./components/TaskCreator";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [tasksItems, setTaskitems] = useState([
@@ -16,6 +16,10 @@ function App() {
       alert("The task already exist");
     }
   }
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasksItems));
+  }, [tasksItems]);
 
   return (
     <div className="App">
