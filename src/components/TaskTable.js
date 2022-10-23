@@ -9,7 +9,10 @@ export const TaskTable = ({tasks}) => {
         <tbody>
           {tasks.map((task) => (
             <tr key={task.name}>
-              <td>{task.name}</td>
+                  <td>
+                      {task.name}
+                      <input type="checkbox" checked={task.done} onChange={ ()=> {}} />
+                  </td>
             </tr>
           ))}
         </tbody>
