@@ -1,10 +1,15 @@
 
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faPlus} from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+
+      <input type='text' placeholder='Enter a new task'/>
+      <button><FontAwesomeIcon icon={faPlus}/> Save task</button>
+
     </div>
   );
 }
