@@ -8,7 +8,7 @@ function App() {
     <div className="App">
 
       <input type='text' placeholder='Enter a new task'/>
-      <button><FontAwesomeIcon icon={faPlus}/> Save task</button>
+      <button onClick={()=>alert('clicked')}><FontAwesomeIcon icon={faPlus}/> Save task</button>
 
     </div>
   );
