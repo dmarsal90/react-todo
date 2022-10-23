@@ -1,6 +1,7 @@
 import "./App.css";
 import { TaskCreator } from "./components/TaskCreator";
 import { useState, useEffect } from "react";
+import { TaskTable } from "./components/TaskTable";
 
 function App() {
   const [tasksItems, setTaskItems] = useState([]);
@@ -27,6 +28,7 @@ function App() {
   return (
     <div className="App">
       <TaskCreator createTask={createTask} />
+      <TaskTable tasks={ tasksItems } />
 
       
     </div>
