@@ -1,6 +1,18 @@
 import { TaskRow } from "./TaskRow";
 
 export const TaskTable = ({ tasks, toggleTask }) => {
+  
+  const taskTableRows = () => {
+    {
+      return (
+        tasks.map((task) => (
+          <TaskRow task={task} key={task.name} toggleTask={toggleTask} />
+        ))
+      );
+      
+    }
+  }
+
   return (
     <table>
       <thead>
@@ -9,9 +21,7 @@ export const TaskTable = ({ tasks, toggleTask }) => {
         </tr>
       </thead>
       <tbody>
-        {tasks.map((task) => (
-          <TaskRow task={task} key={task.name} toggleTask={toggleTask} />
-        ))}
+        taskTableRows();
       </tbody>
     </table>
   );
