@@ -21,7 +21,7 @@ export const TaskTable = ({ tasks, toggleTask }) => {
         </tr>
       </thead>
       <tbody>
-        taskTableRows();
+        taskTableRows(false);
       </tbody>
     </table>
   );
