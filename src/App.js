@@ -47,6 +47,7 @@ function App() {
       <VisibilityControl
         setShowCompleted={(checked) => setShowCompleted(checked)}
         cleanTasks={cleanTasks}
+        isChecked={showCompleted}
       />
 
       {showCompleted === true && (
