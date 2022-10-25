@@ -1,6 +1,8 @@
-export const VisibilityControl = ({ setShowCompleted }) => {
+export const VisibilityControl = ({ setShowCompleted, cleanTasks }) => {
   const handleDelete = () => {
-    alert("cleaning");
+      if (window.confirm('Are you sure you want to delete it?')) {
+          cleanTasks();
+    }
   };
 
   return (

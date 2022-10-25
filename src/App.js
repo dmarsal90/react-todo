@@ -31,8 +31,9 @@ function App() {
     }
   }, []);
 
-  const cleanTask = () => {
-    setTaskItems(tasksItems.filter(task => !task.done));    
+  const cleanTasks = () => {
+    setTaskItems(tasksItems.filter(task => !task.done));   
+    setShowCompleted(false);
   }
 
   useEffect(() => {
@@ -45,6 +46,7 @@ function App() {
       <TaskTable tasks={tasksItems} toggleTask={toggleTask} />
       <VisibilityControl
         setShowCompleted={(checked) => setShowCompleted(checked)}
+        cleanTasks={cleanTasks}
       />
 
       {showCompleted === true && (
