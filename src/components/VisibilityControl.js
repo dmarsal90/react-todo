@@ -1,4 +1,4 @@
-export const VisibilityControl = () => {
+export const VisibilityControl = ({ setShowCompleted }) => {
   const handleDelete = () => {
     alert("cleaning");
   };
@@ -7,8 +7,8 @@ export const VisibilityControl = () => {
     <div>
       <input
         type="checkbox"
-        onChange={(e) => setshowCompleted(!showCompleted)}
-      />
+        onChange={(e) => setShowCompleted(e.target.checked)}
+      />{""}
       <label>Show tasks done</label>
 
       <button onClick={handleDelete}>Clear</button>

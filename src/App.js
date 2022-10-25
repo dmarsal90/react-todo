@@ -2,10 +2,11 @@ import "./App.css";
 import { TaskCreator } from "./components/TaskCreator";
 import { useState, useEffect } from "react";
 import { TaskTable } from "./components/TaskTable";
+import { VisibilityControl } from "./components/VisibilityControl";
 
 function App() {
   const [tasksItems, setTaskItems] = useState([]);
-  const [showCompleted, setshowCompleted] = useState(false);
+  const [showCompleted, setShowCompleted] = useState(false);
 
   function createTask(taskName) {
     if (!tasksItems.find((task) => task.name === taskName)) {
@@ -38,13 +39,10 @@ function App() {
     <div className="App">
       <TaskCreator createTask={createTask} />
       <TaskTable tasks={tasksItems} toggleTask={toggleTask} />
-      <div>
-        <input
-          type="checkbox"
-          onChange={(e) => setshowCompleted(!showCompleted)}
-        />
-        <label>Show tasks done</label>
-      </div>
+      <VisibilityControl
+        setShowCompleted={(checked) => setShowCompleted(checked)}
+      />
+
       {showCompleted === true && (
         <TaskTable
           tasks={tasksItems}
