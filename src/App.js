@@ -31,6 +31,10 @@ function App() {
     }
   }, []);
 
+  const cleanTask = () => {
+    setTaskItems(tasksItems.filter(task => !task.done));    
+  }
+
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasksItems));
   }, [tasksItems]);
