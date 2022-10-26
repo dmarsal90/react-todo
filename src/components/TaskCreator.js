@@ -12,14 +12,17 @@ export const TaskCreator = ({ createTask }) => {
     setNewTaskName("");
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={newTaskName}
-        placeholder="Enter a new task"
-        onChange={(e) => setNewTaskName(e.target.value)}
-      />
-      <button>
+    <form onSubmit={handleSubmit} className='my-2 row'>
+      <div className='col-9'>
+          <input
+              type="text"
+              value={newTaskName}
+              placeholder="Enter a new task"
+              onChange={(e) => setNewTaskName(e.target.value)}
+              className='form-control'
+          />
+      </div>
+      <button className='btn btn-primary btn-sm col-3'>
         <FontAwesomeIcon icon={faPlus} /> Save task
       </button>
     </form>
